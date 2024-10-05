@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,900&display=swap');
+
+:root {
+
+  --white-text: #ffffff;
+  --black-text: #000000;
+
+  --link-color: #ffffff;
+  --link-color-hover: #ffffff;
+  --link-color-background-hover: #f5a81f;
+  --link-color-text-hover: #ffffff;
+
+  --nav-link-color: #000000;
+
+  --heading-color: #132e41;
+
+  --button-background: #f5a81f;
+  --button-hover-background: #f6b238; 
+
+} 
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .site-title {
+    font-size: 20px;
+  }
+
+  .site-subtitle {
+    font-size: 16px;
+  }
+
+  .profile-picture {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;    
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    max-height: 350px;
+    overflow-y: scroll;
+  }
+
+  .neuro-header-text {
+    max-width: 50%;
+  }
+  .neuro-header-text h1 {
+    font-size: 48px;
+  }
+
+}
+
+/* Reset CSS */
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  color: #132e41;
+  font-weight: 800; 
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:active {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-color-hover);
+}
+
+a:link {
+  color: var(--link-color);
+}
+
+a:link:hover {
+  color: var(--link-color-hover);
+}
+
+a:link:visited {
+  color: var(--link-color);
+}
+
+.site-info h2 {
+  font-weight: 700;
+  color: #132e41;
+}
+
+.logo img {
+  height: 100%; 
+  width: 300px;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.site-subtitle {
+  font-size: 14px;
+  color: #888888;
+}
+
+/* Buttons */
+
+.btn-primary {
+  background-color: var(--button-background);
+  border: 0px;
+  font-weight: bold;
+  color: var(--black-text) !important; 
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-background);
+  border: 0px;
+  font-weight: bold;
+  color: var(--black-text) !important; 
+}
+
+.btn-neuro {
+  background-color: #F3A71D;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  color: white;
+}
+
+.btn-neuro:hover {
+  background-color: #F3A71D;
+  opacity: 0.8;
+  color: white;
+}
+
+/* Navigation */
+
+a.nav-link {
+  color: var(--nav-link-color);
+}
+
+a:visited.nav-link {
+  color: var(--nav-link-color);
+}
+
+.nav-link {
+  color: var(--nav-link-color);
+  font-weight: 600;
+}
+
+.nav-link:last-child {
+  margin-right: 10px;
+}
+
+.nav-link.active {
+  color: var(--nav-link-color);
+}
+
+.nav-link.active:hover {
+  background-color: var(--link-color-background-hover) !important;
+  border-radius: 5px;
+  color: var(--black-text) !important;
+}
+
+.nav-link:hover {
+  background-color: var(--link-color-background-hover) !important;
+  border-radius: 5px;
+  color: var(--black-text) !important;
+}
+
+/* Neuro */
+
+.neuro-header {
+  background-color: #ffffff; /* Background color of the header */
+  color: white;
+  padding: 60px 0;
+}
+.neuro-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.neuro-header-text {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.neuro-header-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.neuro-header-text h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+.neuro-header-text p {
+  font-size: 18px;
+}
+.neuro-header-image img {
+  border-radius: 15px;
+  max-width: 100%;
+}
+.neuro-topic-bar {
+  background-color: #00A9A2; /* Adjust this to match the background color of the logo bar */
+  padding: 20px 0;
+  text-align: center;
+}
+.neuro-topic-bar img {
+  max-height: 60px; /* Adjust this to change the logo size */
+  margin: 0 15px;
+}        
+.neuro-section {
+  background-color: #ffffff; /* Adjust this to match the background color in your image */
+  padding: 30px 0;
+  color: white;
+}
+.neuro-card {
+  background-color: #0072BC; /* Adjust this to match the card background color in your image */
+  border: none;
+  padding: 20px;
+}
+.neuro-card {
+  border-radius: 0%;
+}
+
+.alert {
+  border-radius: 0;
+}
+
+/* Footer styles */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}  
+
+a.footer-link {
+  color: var(--white-text);
+  text-decoration: none;
+}
+
+a:hover.footer-link {
+  color: var(--white-text);
+  text-decoration: underline;  
+}
