@@ -1,344 +1,636 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NeuroFriends - A neurodivergent support group for all</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-</head>
-<body>
-<nav class="py-2 bg-body-tertiary border-bottom">
-  <div class="container d-flex flex-wrap">
-    <ul class="nav me-auto">
-      <div class="logo text-center">
-        <li class="nav-item">
-        <a href="#">
-            <img class="pt-2 pb-2" src="img/logo.webp" alt="NeuroFriends Logo">
-          </a>
-        </li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroFriends - A neurodivergent support group for all</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <body>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="welcomeModal"
+      tabindex="-1"
+      aria-labelledby="welcomeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="welcomeModalLabel">Please Note!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            NeuroFriends is for Robert Jones & Agnes Hunt staff only at this
+            time, membership is restricted to Robert Jones & Agnes Hunt staff
+            and volunteers.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              I'm a RJAH staff member.
+            </button>
+          </div>
+        </div>
       </div>
-    </ul>
-    <nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#dates">Upcoming Meetings</a>
-        </li> 
-        <li class="nav-item">
-            <a class="nav-link" aria-current="page" target="_blank" href="https://forms.office.com/e/0WQwURYL1V">Feedback</a>
-          </li>        
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#faq">FAQ</a>
-        </li>        
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#contact">Get In Touch</a>
-        </li>        
-      </ul>      
     </div>
-  </div>
-</nav>
 
-</div>
-</nav> 
-
-<div class="neuro-topic-bar">
-    <div class="container text-white fs-5">
-        <div class="row justify-content-center">
-            <div class="col-auto fade-image">
-                Peer to Peer Support
+    <div class="main-content">
+      <nav class="py-2 bg-body-tertiary border-bottom">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto">
+            <div class="logo text-center">
+              <li class="nav-item">
+                <a href="#">
+                  <img
+                    class="pt-2 pb-2"
+                    src="img/logo.webp"
+                    alt="NeuroFriends Logo"
+                  />
+                </a>
+              </li>
             </div>
-            <div class="col-auto fade-image">
-                Resources
-            </div>  
-            <div class="col-auto fade-image">
-                Group Topics
-            </div> 
-            <div class="col-auto fade-image">
-                Guidance
+          </ul>
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#dates"
+                      >Upcoming Meetings</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      target="_blank"
+                      href="https://forms.office.com/e/0WQwURYL1V"
+                      >Feedback</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#faq">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#contact"
+                      >Get In Touch</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
+          </nav>
         </div>
-    </div>
-</div>
+      </nav>
 
-<section class="neuro-section">
-    <div class="container text-center">
-        <div class="alert alert-danger">
-            NeuroFriends is for Robert Jones & Agnes Hunt staff only at this time, membership is restricted to Robert Jones & Agnes Hunt staff and volunteers.
+      <div class="neuro-topic-bar">
+        <div class="container text-white fs-5">
+          <div class="row justify-content-center">
+            <div class="col-auto fade-image">Peer to Peer Support</div>
+            <div class="col-auto fade-image">Resources</div>
+            <div class="col-auto fade-image">Group Topics</div>
+            <div class="col-auto fade-image">Guidance</div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
 
-<section class="neuro-section">
-    <div class="container text-center">
-        <h2>How will this benefit me?</h2>
-        <div class="row mt-4">
+      <section class="neuro-section">
+        <div class="container text-center">
+          <div class="alert alert-danger">
+            NeuroFriends is for Robert Jones & Agnes Hunt staff only at this
+            time, membership is restricted to Robert Jones & Agnes Hunt staff
+            and volunteers.
+          </div>
+        </div>
+      </section>
+
+      <section class="neuro-section">
+        <div class="container text-center">
+          <h2>How will this benefit me?</h2>
+          <div class="row mt-4">
             <div class="col-md-12">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-
-                        <p class="card-text">NeuroFriends has been setup to support neurodivergent people. It is a peer to peer safe space for all.<p>
-                        
-                        <p class="card-text">In the NeuroFriends group everyone is equal and what is discussed within the group remains in the group.</p> 
-                        
-                        <p class="card-text">You might be neurodivergent yourself, have a friend who is neurodivergent or be a parent of a neurodivergent person, you are welcome at NeuroFriends.</p>
-
-                        <p class="card-text">NeuroFriends welcomes <span class="border-bottom fw-bold">EVERYONE</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="dates" class="neuro-section">
-    <div class="container text-center">
-        <h2>Upcoming Meetings</h2>
-        <div class="row mt-4">
-            <div class="col-md-4 mb-4">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-                        <h2 class="card-title">September 20th 2024</h2>
-                        <p class="card-text"><span class="fw-bold">Location:</span> Conference Room 1</p>
-                        <p class="card-text"><span class="fw-bold">Time:</span> 13:00 - 14:00</p>                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-                        <h2 class="card-title">October 18th 2024</h2>
-                        <p class="card-text"><span class="fw-bold">Location:</span> Board Room</p>
-                        <p class="card-text"><span class="fw-bold">Time:</span> 13:00 - 14:00</p>                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-                        <h2 class="card-title">November 15th 2024</h2>
-                        <p class="card-text"><span class="fw-bold">Location:</span> ARC Seminar Room</p>
-                        <p class="card-text"><span class="fw-bold">Time:</span> 13:00 - 14:00</p>                                              
-                    </div>
-                </div>
-            </div>
-        </div>
-            <div class="row mt-2">
-            <div class="col-md-4 mb-4">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-                        <h2 class="card-title">December 20th 2024</h2>
-                        <p class="card-text"><span class="fw-bold">Location:</span> Conference Room 1</p>
-                        <p class="card-text"><span class="fw-bold">Time:</span> 13:00 - 14:00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-                        <h2 class="card-title">January 17th 2025</h2>
-                        <p class="card-text"><span class="fw-bold">Location:</span> Conference Room 1</p>
-                        <p class="card-text"><span class="fw-bold">Time:</span> 13:00 - 14:00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-                        <h2 class="card-title">February 17th 2025</h2>
-                        <p class="card-text"><span class="fw-bold">Location:</span> Conference Room 1</p>
-                        <p class="card-text"><span class="fw-bold">Time:</span> 13:00 - 14:00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <div class="row mt-2">
-            <div class="col-md-4 mb-4">
-                <div class="card neuro-card">                    
-                    <div class="card-body text-white">
-                        <h2 class="card-title">March 21th 2025</h2>
-                        <p class="card-text"><span class="fw-bold">Location:</span> Conference Room 1</p>
-                        <p class="card-text"><span class="fw-bold">Time:</span> 13:00 - 14:00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section  id="contact" class="neuro-section">
-    <div class="container text-center">
-    <h2>What to expect</h2>
-    <div class="row mt-4">
-        <div class="col-md-4 mb-4">
-            <div class="card neuro-card">
+              <div class="card neuro-card">
                 <div class="card-body text-white">
-                    <h2 class="card-title">Room Layout</h2>
-                    <p class="card-text">If you would like to see how the room(s) will be laid out ahead of the meeting, you can do that by clicking the button below.</p>
-                    <a href="locations.html" id="room-layout" class="btn btn-primary">View Room Layout</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card neuro-card">
-                <div class="card-body text-white">
-                    <h2 class="card-title">Facilitator</h2>
-                    <p class="card-text"><span class="fw-bold">Location:</span> Board Room</p>
-                    <p class="card-text"><span class="fw-bold">Time:</span> 13:00 - 14:00</p>
-                    <p class="card-text">This is the first meeting, we plan to get to know one another and plan for future meetings.</p>
-                    <button id="room-layot" class="btn btn-primary">Meet the facilitators</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card neuro-card">
-                <div class="card-body text-white">
-                    <h2 class="card-title">Facilities</h2>
-                    <p class="card-text">The following facilities are available at all NeuroFriends meetings.</p>
-                    <p class="card-text">
-                        <span class="fw-bold">Drinks:</span> Tea*, Coffee* & Sugar, Milk & Water
-                    </p>
-                    <p class="card-text"><span class="fw-bold">Toilets:</span> Toilets are available</p>
-                    <p class="card-text"><span class="fw-bold">Access:</span> A lift is available to get to the meeting space</p>
-                    <p class="card-text">If you have any specific access requirements, please <a href mailto:rjah@neurofriends@nhs.net>contact</a> a facilitator.</p>
-                    <p class="text-white small">*Decaf Options Available</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
+                  <p class="card-text">
+                    NeuroFriends has been setup to support neurodivergent
+                    people. It is a peer to peer safe space for all.
+                  </p>
+                  <p></p>
 
-<section  id="contact" class="neuro-section">
-    <div class="container text-center">
-    <h2>Contact The Facilitators</h2>
-    <div class="row mt-4">
+                  <p class="card-text">
+                    In the NeuroFriends group everyone is equal and what is
+                    discussed within the group remains in the group.
+                  </p>
+
+                  <p class="card-text">
+                    You might be neurodivergent yourself, have a friend who is
+                    neurodivergent or be a parent of a neurodivergent person,
+                    you are welcome at NeuroFriends.
+                  </p>
+
+                  <p class="card-text">
+                    NeuroFriends welcomes
+                    <span class="border-bottom fw-bold">EVERYONE</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dates" class="neuro-section">
+        <div class="container text-center">
+          <h2>Upcoming Meetings</h2>
+          <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">September 20th 2024</h2>
+                  <p class="card-text">
+                    <span class="fw-bold">Location:</span> Conference Room 1
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Time:</span> 13:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">October 18th 2024</h2>
+                  <p class="card-text">
+                    <span class="fw-bold">Location:</span> Board Room
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Time:</span> 13:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">November 15th 2024</h2>
+                  <p class="card-text">
+                    <span class="fw-bold">Location:</span> ARC Seminar Room
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Time:</span> 13:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">December 20th 2024</h2>
+                  <p class="card-text">
+                    <span class="fw-bold">Location:</span> Conference Room 1
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Time:</span> 13:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">January 17th 2025</h2>
+                  <p class="card-text">
+                    <span class="fw-bold">Location:</span> Conference Room 1
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Time:</span> 13:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">February 17th 2025</h2>
+                  <p class="card-text">
+                    <span class="fw-bold">Location:</span> Conference Room 1
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Time:</span> 13:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">March 21th 2025</h2>
+                  <p class="card-text">
+                    <span class="fw-bold">Location:</span> Conference Room 1
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Time:</span> 13:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="neuro-section">
+        <div class="container text-center">
+          <h2>What to expect</h2>
+          <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">Room Layout</h2>
+                  <p class="card-text">
+                    If you would like to see how the room(s) will be laid out
+                    ahead of the meeting, you can do that by clicking the button
+                    below.
+                  </p>
+                  <a
+                    href="locations.html"
+                    id="room-layout"
+                    class="btn btn-primary"
+                    >View Room Layout</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">Facilitator</h2>
+                  <p class="card-text">
+                    <span class="fw-bold">Location:</span> Board Room
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Time:</span> 13:00 - 14:00
+                  </p>
+                  <p class="card-text">
+                    This is the first meeting, we plan to get to know one
+                    another and plan for future meetings.
+                  </p>
+                  <button id="room-layot" class="btn btn-primary">
+                    Meet the facilitators
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <h2 class="card-title">Facilities</h2>
+                  <p class="card-text">
+                    The following facilities are available at all NeuroFriends
+                    meetings.
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Drinks:</span> Tea*, Coffee* & Sugar,
+                    Milk & Water
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Toilets:</span> Toilets are available
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Access:</span> A lift is available to
+                    get to the meeting space
+                  </p>
+                  <p class="card-text">
+                    If you have any specific access requirements, please
+                    <a href mailto:rjah@neurofriends@nhs.net>contact</a> a
+                    facilitator.
+                  </p>
+                  <p class="text-white small">*Decaf Options Available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="neuro-section">
+        <div class="container text-center">
+          <h2>Contact The Facilitators</h2>
+          <div class="row mt-4">
             <div class="col-md-12 mb-2">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-                        <p class="card-text">If you need to speak to the facilitators you can use the button below to send an email.</p>                        
-                        <a class="btn btn-primary" target="_blank" href="/neurofriends-contact/">Contact The Facilitators</a>
-                    </div>
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <p class="card-text">
+                    If you need to speak to the facilitators you can use the
+                    button below to send an email.
+                  </p>
+                  <a
+                    class="btn btn-primary"
+                    target="_blank"
+                    href="/neurofriends-contact/"
+                    >Contact The Facilitators</a
+                  >
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-<section class="neuro-section">
-    <div class="container text-center">
-        <h2>Support between meetings</h2>
-        <div class="row mt-4">
+      <section class="neuro-section">
+        <div class="container text-center">
+          <h2>Support between meetings</h2>
+          <div class="row mt-4">
             <div class="col-md-12 mb-2">
-                <div class="card neuro-card">
-                    <div class="card-body text-white">
-                        <p class="card-text">If you would like to make a connection between meetings we have a private Facebook group that you can join.</p>
-                        <p class="card-text"><span class="fw-bold">Please note:</span> This group has been setup to allow members to post anonymously, this has been done to allow members who don't want their names next to a post to post and retain their privacy.</p>
-                        <a class="btn btn-primary" target="_blank" href="https://www.facebook.com/groups/447033588197410">Join The Facebook Group</a>
-                    </div>
+              <div class="card neuro-card">
+                <div class="card-body text-white">
+                  <p class="card-text">
+                    If you would like to make a connection between meetings we
+                    have a private Facebook group that you can join.
+                  </p>
+                  <p class="card-text">
+                    <span class="fw-bold">Please note:</span> This group has
+                    been setup to allow members to post anonymously, this has
+                    been done to allow members who don't want their names next
+                    to a post to post and retain their privacy.
+                  </p>
+                  <a
+                    class="btn btn-primary"
+                    target="_blank"
+                    href="https://www.facebook.com/groups/447033588197410"
+                    >Join The Facebook Group</a
+                  >
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-
-<section id="faq" class="neuro-section">
-    <div class="container text-center">
-        <h2>Frequently Asked Questions</h2>
-        <div class="row mt-4">
+      <section id="faq" class="neuro-section">
+        <div class="container text-center">
+          <h2>Frequently Asked Questions</h2>
+          <div class="row mt-4">
             <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#attendanceDiag"aria-expanded="false" aria-controls="attendanceDiag">
-                        I don't have a diagnosis can I attend?
-                    </button>
-                    </h2>
-                    <div id="attendanceDiag" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        You don't need a diagnosis to attend NeuroFriends, we welcome everyone with or without a diagnosis. 
-                    </div>
-                    </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#attendanceDiag"
+                    aria-expanded="false"
+                    aria-controls="attendanceDiag"
+                  >
+                    I don't have a diagnosis can I attend?
+                  </button>
+                </h2>
+                <div
+                  id="attendanceDiag"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    You don't need a diagnosis to attend NeuroFriends, we
+                    welcome everyone with or without a diagnosis.
+                  </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#attendanceNonNeuro" aria-expanded="false" aria-controls="attendanceNonNeuro">
-                        I am not neurodivergent is it ok for me to attend?
-                    </button>
-                    </h2>
-                    <div id="attendanceNonNeuro" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        NeuroFriends is a space for everyone, you are welcome to attend. 
-                    </div>
-                    </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#attendanceNonNeuro"
+                    aria-expanded="false"
+                    aria-controls="attendanceNonNeuro"
+                  >
+                    I am not neurodivergent is it ok for me to attend?
+                  </button>
+                </h2>
+                <div
+                  id="attendanceNonNeuro"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    NeuroFriends is a space for everyone, you are welcome to
+                    attend.
+                  </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#recordings" aria-expanded="false" aria-controls="recordings">
-                        Will there be a recording available after the meeting?
-                    </button>
-                    </h2>
-                    <div id="recordings" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        There will not be any recordings made during the meet ups, this is to protect the privacy of the members.
-                        <br /><br />
-                        If you are unable to attend in person, please reach out to the facilitators using the contact form on OurSpace and we will make every effort to meet you individually or arrange a future meeting around your availability. 
-                    </div>
-                    </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#recordings"
+                    aria-expanded="false"
+                    aria-controls="recordings"
+                  >
+                    Will there be a recording available after the meeting?
+                  </button>
+                </h2>
+                <div
+                  id="recordings"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    There will not be any recordings made during the meet ups,
+                    this is to protect the privacy of the members.
+                    <br /><br />
+                    If you are unable to attend in person, please reach out to
+                    the facilitators using the contact form on OurSpace and we
+                    will make every effort to meet you individually or arrange a
+                    future meeting around your availability.
+                  </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#feedback" aria-expanded="false" aria-controls="feedback">
-                       I have an idea for a future meeting how can I feedback?
-                    </button>
-                    </h2>
-                    <div id="feedback" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        You can email the group facilitator using <a href="/neurofriends-contact/">this link</a>.
-                    </div>
-                    </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#feedback"
+                    aria-expanded="false"
+                    aria-controls="feedback"
+                  >
+                    I have an idea for a future meeting how can I feedback?
+                  </button>
+                </h2>
+                <div
+                  id="feedback"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    You can email the group facilitator using
+                    <a href="/neurofriends-contact/">this link</a>.
+                  </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#concerns" aria-expanded="false" aria-controls="concerns">
-                       I have a concern I would like to raise. 
-                    </button>
-                    </h2>
-                    <div id="concerns" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Please email the group facilitator using <a href="/neurofriends-contact/">this link</a> in the first instance, depending on the nature of the concern it may be a requirement for us to contact other parties.
-                    </div>
-                    </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#concerns"
+                    aria-expanded="false"
+                    aria-controls="concerns"
+                  >
+                    I have a concern I would like to raise.
+                  </button>
+                </h2>
+                <div
+                  id="concerns"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Please email the group facilitator using
+                    <a href="/neurofriends-contact/">this link</a> in the first
+                    instance, depending on the nature of the concern it may be a
+                    requirement for us to contact other parties.
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <p>Copyright 2024 <a class="footer-link" href="#">NeuroFriends</a></p>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <p>
+              Copyright 2024 <a class="footer-link" href="#">NeuroFriends</a>
+            </p>
+          </div>
         </div>
+      </footer>
     </div>
-</footer>
 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      window.onload = function () {
+        // Check if the cookie exists, if not, show the modal
+        if (!getCookie("modalClosed")) {
+          console.log("Modal cookie not found, showing modal.");
+          var myModal = new bootstrap.Modal(
+            document.getElementById("welcomeModal")
+          );
+          myModal.show();
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+          // Add blur effect to the main content when the modal is shown
+          document.querySelector(".main-content").classList.add("blurred");
+
+          // When the modal is closed, remove blur and set the cookie
+          var modalElement = document.getElementById("welcomeModal");
+          modalElement.addEventListener("hidden.bs.modal", function () {
+            console.log("Modal closed, removing blur.");
+            document.querySelector(".main-content").classList.remove("blurred");
+
+            // Set a cookie to prevent the modal from opening again for 7 days
+            setCookie("modalClosed", "true", 7);
+            console.log("Cookie set after modal close.");
+          });
+
+          // Set the cookie when the button is clicked
+          var closeButton = document.querySelector(".modal-footer button");
+          closeButton.addEventListener("click", function () {
+            console.log("Button clicked, removing blur and setting cookie.");
+            document.querySelector(".main-content").classList.remove("blurred");
+            setCookie("modalClosed", "true", 7);
+
+            // Also hide the modal to make sure it's dismissed properly
+            myModal.hide();
+          });
+        } else {
+          console.log("Modal cookie found, not showing modal.");
+        }
+      };
+
+      // Function to set a cookie
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        console.log("Cookie set: " + name + "=" + value);
+      }
+
+      // Function to get a cookie
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i].trim(); // Remove extra spaces
+          if (c.indexOf(nameEQ) == 0) {
+            return c.substring(nameEQ.length, c.length);
+          }
+        }
+        return null;
+      }
+    </script>
+  </body>
 </html>

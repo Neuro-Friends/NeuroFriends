@@ -257,3 +257,8 @@ a:hover.footer-link {
   color: var(--white-text);
   text-decoration: underline;  
 }
+
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+}
