@@ -36,13 +36,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="welcomeModalLabel">Please Note!</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h5 class="modal-title" id="welcomeModalLabel">Please Note</h5>            
           </div>
           <div class="modal-body">
             NeuroFriends is for Robert Jones & Agnes Hunt staff only at this
@@ -55,7 +49,7 @@
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              I'm a RJAH staff member.
+              I'm a RJAH staff member
             </button>
           </div>
         </div>
@@ -322,9 +316,9 @@
                     This is the first meeting, we plan to get to know one
                     another and plan for future meetings.
                   </p>
-                  <button id="room-layot" class="btn btn-primary">
+                  <a id="Facilitators" class="btn btn-primary" href="facilitators.html">
                     Meet the facilitators
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -371,12 +365,7 @@
                     If you need to speak to the facilitators you can use the
                     button below to send an email.
                   </p>
-                  <a
-                    class="btn btn-primary"
-                    target="_blank"
-                    href="/neurofriends-contact/"
-                    >Contact The Facilitators</a
-                  >
+                  <a class="btn btn-primary" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#106;&#97;&#104;&#46;&#110;&#101;&#117;&#114;&#111;&#102;&#114;&#105;&#101;&#110;&#100;&#115;&#64;&#110;&#104;&#115;&#46;&#110;&#101;&#116;">&#67;&#111;&#110;&#116;&#97;&#99;&#116;&#32;&#84;&#104;&#101;&#32;&#70;&#97;&#99;&#105;&#108;&#105;&#116;&#97;&#116;&#111;&#114;&#115;</a>
                 </div>
               </div>
             </div>
@@ -520,7 +509,7 @@
                 >
                   <div class="accordion-body">
                     You can email the group facilitator using
-                    <a href="/neurofriends-contact/">this link</a>.
+                    <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#106;&#97;&#104;&#46;&#110;&#101;&#117;&#114;&#111;&#102;&#114;&#105;&#101;&#110;&#100;&#115;&#64;&#110;&#104;&#115;&#46;&#110;&#101;&#116;">&#116;&#104;&#105;&#115;&#32;&#108;&#105;&#110;&#107;</a>
                   </div>
                 </div>
               </div>
@@ -568,69 +557,6 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-      window.onload = function () {
-        // Check if the cookie exists, if not, show the modal
-        if (!getCookie("modalClosed")) {
-          console.log("Modal cookie not found, showing modal.");
-          var myModal = new bootstrap.Modal(
-            document.getElementById("welcomeModal")
-          );
-          myModal.show();
-
-          // Add blur effect to the main content when the modal is shown
-          document.querySelector(".main-content").classList.add("blurred");
-
-          // When the modal is closed, remove blur and set the cookie
-          var modalElement = document.getElementById("welcomeModal");
-          modalElement.addEventListener("hidden.bs.modal", function () {
-            console.log("Modal closed, removing blur.");
-            document.querySelector(".main-content").classList.remove("blurred");
-
-            // Set a cookie to prevent the modal from opening again for 7 days
-            setCookie("modalClosed", "true", 7);
-            console.log("Cookie set after modal close.");
-          });
-
-          // Set the cookie when the button is clicked
-          var closeButton = document.querySelector(".modal-footer button");
-          closeButton.addEventListener("click", function () {
-            console.log("Button clicked, removing blur and setting cookie.");
-            document.querySelector(".main-content").classList.remove("blurred");
-            setCookie("modalClosed", "true", 7);
-
-            // Also hide the modal to make sure it's dismissed properly
-            myModal.hide();
-          });
-        } else {
-          console.log("Modal cookie found, not showing modal.");
-        }
-      };
-
-      // Function to set a cookie
-      function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-          var date = new Date();
-          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-          expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        console.log("Cookie set: " + name + "=" + value);
-      }
-
-      // Function to get a cookie
-      function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(";");
-        for (var i = 0; i < ca.length; i++) {
-          var c = ca[i].trim(); // Remove extra spaces
-          if (c.indexOf(nameEQ) == 0) {
-            return c.substring(nameEQ.length, c.length);
-          }
-        }
-        return null;
-      }
-    </script>
+    <script src="js/notification.js"></script>    
   </body>
 </html>
